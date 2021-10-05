@@ -22,4 +22,14 @@ This message seems to indicate that the --hostingStartupAssembiles argument is b
 
 However, the LibraryStartup class which implements IHostingStartup is never called. Consequently, when the app is run and the "/" route is requested, an exception is generated with the message:
 
+```plaintext
 No service for type 'Interface.IHandler' has been registered.
+```
+
+NOTE: If I examine the assembly list returned by:
+
+```CSharp
+AppDomain.CurrentDomain.GetAssemblies();
+```
+
+**immediately before the call to app.Run**, the "Library" assembly is not in the list.
