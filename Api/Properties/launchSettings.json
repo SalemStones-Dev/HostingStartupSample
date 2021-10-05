@@ -10,10 +10,10 @@
   "profiles": {
     "Api": {
       "commandName": "Project",
-      "commandLineArgs": "--hostingStartupAssemblies=Library",
       "launchBrowser": true,
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_HOSTINGSTARTUPASSEMBLIES": "Library"
       },
       "applicationUrl": "https://localhost:5001;http://localhost:5000",
       "dotnetRunMessages": true
